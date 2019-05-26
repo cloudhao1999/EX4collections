@@ -63,6 +63,19 @@ public class Student {
         }
         return 0;
     }
+    public int hashCode() {
+    	short areaCode=3;
+		int result = Short.hashCode(areaCode);
+
+        short prefix=4;
+		result = 31 * result + Short.hashCode(prefix);
+
+        short lineNum=5;
+		result = 31 * result + Short.hashCode(lineNum);
+
+        return result;
+  
+    }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
