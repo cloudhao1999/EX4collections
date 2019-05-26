@@ -4,7 +4,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
+/*
+ * 创建学生类，包含学号、姓名、综合测评总分，使
+ * 用ArrayList保存学生对象。先对学生对象按综合测评总分升序排列，再使用
+ * Iterator的next方法输出List中的元素。再按学生的学号从小到大排序，
+ * 使用Iterator的forEachRemaining方法输出
+--提示，将学生类实现Comparable接口，按学号排序采用自然排序。按综测排序
+，采用指定比较器排序。
+ */
 public class Student3 implements Comparable<Student3>{
 	 	private String name;
 	 	private int s_id;
