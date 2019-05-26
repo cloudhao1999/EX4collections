@@ -76,9 +76,24 @@ public class Student {
         return result;
   
     }
+    public String toString() {
+        return "Student{" +
+                "学号为" + s_id +
+                ", 姓名为'" + name + '\'' +
+                ", 成绩为" + score +
+                '}';
+    }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Set<Student> set = new TreeSet<>();
+        set.add(new Student(1, "cyh", 100));
+        set.add(new Student(2, "fyx", 50));
+        set.add(new Student(3, "xyy", 50));
 
+        Iterator<Student> iterator = set.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
 	}
 
 }
