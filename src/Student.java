@@ -31,6 +31,15 @@ public class Student {
     	}
     	return result;
     }
+    public int compareTo(Student o) {
+        if (this.score != o.score) {
+            return this.score > o.score ? 1 : -1;
+        }
+        if (!this.name.equals(o.name)) {
+            return this.name.compareTo(o.name);
+        }
+        return 0;
+    }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
