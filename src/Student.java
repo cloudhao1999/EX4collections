@@ -14,6 +14,29 @@ public class Student {
         this.name = name;
         this.score = score;
     }
+    public int getId() {
+        return s_id;
+    }
+
+    public void setId(int id) {
+        this.s_id = s_id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getScore() {
+        return score;
+    }
+
+    public void setScore(double score) {
+        this.score = score;
+    }
     @Override
     public boolean equals(Object s) {
     	if(this==s) return true;
@@ -31,12 +54,12 @@ public class Student {
     	}
     	return result;
     }
-    public int compareTo(Student o) {
-        if (this.score != o.score) {
-            return this.score > o.score ? 1 : -1;
+    public int compareTo(Student s) {
+    	if (this.score != s.score) {
+            return this.score > s.score ? 1 : -1;
         }
-        if (!this.name.equals(o.name)) {
-            return this.name.compareTo(o.name);
+        if (!this.name.equals(s.name)) {
+            return this.name.compareTo(s.name);
         }
         return 0;
     }
